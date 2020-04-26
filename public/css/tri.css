@@ -1,0 +1,161 @@
+body{
+	background-color: black;
+}
+body img{
+	width: 100%;
+	height: 10%;
+}
+
+.one p{
+	color: white;
+	text-align: center;
+	font-size: 20px;
+	padding-top: 3%;
+	width: 60%;
+	padding-left: 20%;
+	font-family: 'Noticia Text', serif;
+
+}
+.slideshow{
+	margin: 0 auto;
+	padding-top: 50px;
+	height: 700px;
+	background: black;
+	box-sizing: border-box;
+}
+.content {
+	margin: auto;
+	width: 190px;
+	perspective: 1000px;
+	position: relative;
+	padding-top: 80px;
+}
+.content-carrousel {
+	width: 100%;
+	position: absolute;
+	float: right;
+	animation: rotar 15s infinite linear;
+	transform-style: preserve-3d;
+}
+.content-carrousel:hover{
+	animation-play-state: paused;
+	cursor: pointer;
+}
+.content-carrousel figure{
+	width: 100%;
+	height: 120px;
+	border: 1px solid #4d444d;
+	overflow: hidden;
+	position: absolute;
+}
+.content-carrousel figure:nth-child(1) {
+    transform: rotateY(0deg) translateZ (300px);
+}
+.content-carrousel figure:nth-child(2) {
+	transform: rotateY(40deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(3) {
+	transform: rotateY(80deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(4) {
+	transform: rotateY(120deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(5) {
+	transform: rotateY(160deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(6) {
+	transform: rotateY(200deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(7) {
+	transform: rotateY(240deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(8) {
+	transform: rotateY(280deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(9) {
+	transform: rotateY(320deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(10) {
+	transform: rotateY(360deg) translateZ(300px);
+}
+.shadow {
+	position: absolute;
+	box-shadow: 0px 0px 20px 0px #000;
+	border-radius: 2px;
+}
+.content-carrousel img{
+	image-rendering: auto;
+	transition: all 300ms;
+	width: 100%;
+	height: 100%;
+}
+.content-carrousel img hover{
+	transform: scale(1.2);
+	transition: all 300ms;
+}
+@keyframes rotar {
+	from {
+		transform: rotateY(0deg);
+	} to{
+		transform: rotateY(360deg);
+	}
+}
+.container {
+  position: relative;
+  max-width: 800px; /* Maximum width */
+  margin: 0 auto; /* Center it */
+}
+
+.container .content {
+  position: absolute; /* Position the background text */
+  top: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: white; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
+  font-family: 'Bree Serif', serif;
+  font-size: 20px;
+  animation: fade 400ms ease-in-out forwards;
+}
+@keyframes fade {
+	0%{
+		top: 10px;
+		left: 10px;
+		filter: blur(15px);
+		opacity: 0;
+	}
+	50%{
+		filter: blur(10px);
+		opacity: 0.9;
+	}
+	100%{
+		top: 0px;
+		left: 0px;
+		filter: blur(0px);
+		opacity: 1;
+	}
+}
+.container .content h2{
+	font-family: 'Bree Serif', serif;
+	font-size: 30px;
+	width: 50%;
+	color: white;
+}
+.container .content h3{
+	bottom: 0;
+	text-align: right;                                                               
+	color: white;
+}
+.one{
+	top: 2px;
+	animation: drop 0.5s ease forwards;
+}
+@keyframes drop{
+	0%{}
+	70%{ transform: translateY(90px); }
+	100%{ transform: translateY(40px); }
+}
+.first img{
+	animation: fade 400ms ease-in-out forwards;
+}
